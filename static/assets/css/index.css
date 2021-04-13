@@ -1,0 +1,24 @@
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background: black;
+    color: #95999c;
+    text-align: center;
+    display: grid;
+}
+
+.my-fluid-container {
+    padding-left: 21px;
+    padding-right: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    margin-left: -21px;
+}

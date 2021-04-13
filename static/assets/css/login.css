@@ -1,0 +1,31 @@
+.form-input {
+    text-align: left;
+
+}
+.form-label {
+    text-align: right;
+    font-weight: bold;
+}
+
+.logo-padded {
+    padding-top: 50px;
+    padding-left: 55px;
+    margin-bottom: 50px;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.row-margin-05 {
+    margin-top: 0.5em;
+}
+
+.row-margin-10 {
+    margin-top: 1.0em;
+}
+
+.login-error {
+    font-weight: bold;
+    color: red;
+}
