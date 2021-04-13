@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# This script creates ./start.sh which starts gunicorn with the environment variables given in PyCharm's .idea/workspace.xml
+cat .idea/workspace.xml  | grep "<env name=" | sed 's/<env name="//g' | sed 's/" value//g' | sed 's/"//g' | sed 's/ \/>//g' |  sed 's/  */ /g' | sed 's/^ /export /g' > ./start.sh; echo "python3 ./app.py" >> start.sh; chmod +x ./start.sh
