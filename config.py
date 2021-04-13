@@ -9,7 +9,7 @@ class Config(object):
     SECRET_KEY = 'changeme-before-production'
     CSRF_ENABLED = True
     LOGLEVEL = "WARNING"
-    LOGFILE = basedir + "/login-with-flask.log"
+    LOGFILE = basedir + "/flask-template.log"
 
 
 class Production(Config):

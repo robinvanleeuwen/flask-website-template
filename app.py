@@ -5,9 +5,9 @@ from flask import Flask, render_template
 from flask_sqlalchemy_session import flask_scoped_session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from logger import RsLogger
+from logger import CustomLogger
 
-log = RsLogger()
+log = CustomLogger()
 
 login_manager = LoginManager()
 

@@ -32,7 +32,7 @@ class Singleton(type):
         return cls._instances[cls]
 
 
-class RsLogger(object, metaclass=Singleton):
+class CustomLogger(object, metaclass=Singleton):
     def __init__(self, log_level=None, log_to_screen=True):
         self.log_to_screen = log_to_screen
 
@@ -149,7 +149,7 @@ class RsLogger(object, metaclass=Singleton):
         if message:
             try:
                 f = open(
-                    app.config.get("LOGFILE", "/var/log/rawfare.log"), "a"
+                    app.config.get("LOGFILE", "/var/log/flask-template.log"), "a"
                 )
                 f.write(message + "\n")
             except Exception as e:
