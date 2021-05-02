@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.pacel-cache/
 
 # C extensions
 *.so
@@ -17,8 +18,7 @@ migrations/
 # Distribution / packaging
 .Python
 migrations/versions/
-.idea/
-.venv/
+
 old/
 env/
 build/
@@ -94,6 +94,7 @@ celerybeat-schedule
 # virtualenv
 venv/
 ENV/
+.venv/
 
 # Spyder project settings
 .spyderproject
