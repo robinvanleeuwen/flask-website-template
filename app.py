@@ -1,7 +1,7 @@
 import os
 
 from flask_login import LoginManager
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory, request
 from flask_cors import CORS
 from flask_sqlalchemy_session import flask_scoped_session
 from sqlalchemy import create_engine
@@ -25,6 +25,8 @@ log.warning("LoginManager is not setup!")
 # login_manager.login_view = 'stream'
 
 log.warning("SQLAlchemy is not setup!")
+
+
 # engine = create_engine(os.environ['DATABASE_URL'])
 # session_factory = sessionmaker(bind=engine)
 # db_session = flask_scoped_session(session_factory, app)
@@ -33,6 +35,15 @@ log.warning("SQLAlchemy is not setup!")
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+log.warning("Setup your sitemap and robots.txt")
+
+
+@app.route("/robots.txt")
+@app.route("/sitemap.xml")
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 
 if __name__ == "__main__":
